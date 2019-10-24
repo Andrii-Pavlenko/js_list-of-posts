@@ -32,7 +32,6 @@ function table() {
       const commentsCell = document.createElement('table');
       const rows = document.createElement('tr');
 
-
       postsCell.textContent = post.title;
       postText.textContent = post.body;
 
@@ -47,6 +46,7 @@ function table() {
           for (let comment of comments) {
             if (comment.postId === post.id) {
               comment.postId = post;
+              
               const miniRows = document.createElement('tr');
               const commentAuthor = document.createElement('td');
               const commentText = document.createElement('td');
